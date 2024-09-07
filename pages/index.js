@@ -10,20 +10,18 @@ const font1 = Roboto({
 export default function Home(props) {
   return (
     <>
-      <h1 className={font1.className}>Kids Comic</h1>
-      <p>UI part of educational AI generated kid comicstrip</p>
-      <h2 className={font1.className}>My Comic - Why do oranges stick together</h2>
+      <h1 className={font1.className}>My Comic</h1>
       {props.panels.map((panel, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="imagepanel">
             <Image
-                src={`${panel.url}`}
-                width={500}
-                height={500}
-                alt={panel.title}
+              src={`${panel.url}`}
+              width={500}
+              height={500}
+              alt={panel.title}
             />
-            <p className={font1.className}>{panel.content}</p>
-            <hr />
+            <div className="speechpanel"><blockquote className="speech bubble">{panel.content}</blockquote></div>
+            <p>&nbsp;</p>
           </div>
         )
       })}
