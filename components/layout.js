@@ -6,9 +6,12 @@ export default function Layout({ children }) {
 
   return (
     <>
-        <div>
-            <nav className="navigation">
-                <ul>
+        <div className="navbar bg-base-100">
+            <div className="flex-1">
+            Kids Comic - educational and fun AI
+            </div>
+            <div className="flex-none">
+                <ul className="menu menu-horizontal px-1">
                 <li>
                     <Link href="/" className={router.pathname=="/" ? "active" : ""}>Home</Link>
                 </li>
@@ -16,7 +19,10 @@ export default function Layout({ children }) {
                     <Link href="/about" className={router.pathname=="/about" ? "active" : ""}>About</Link>
                 </li>
                 </ul>
-            </nav>
+            </div>
+        </div>     
+        <div>
+            &nbsp;
         </div>
         {children}
     </>
