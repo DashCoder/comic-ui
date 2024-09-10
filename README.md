@@ -15,3 +15,15 @@ npx tailwindcss -i global.css -o ./styles/global.css
 npm run dev
 ```
 
+## Optional: Deploy project to Azure "Static Web App"
+```
+az login
+```
+
+```
+swa login
+```
+
+```
+swa deploy --env production -a ./mydevfolder
+```
